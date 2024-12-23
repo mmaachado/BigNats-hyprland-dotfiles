@@ -1,0 +1,54 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "margin-top": 14,
+    "margin-bottom": 0,
+    "margin-left": 14,
+    "margin-right": 14,
+    "spacing": 0, // Gaps between modules (4px)
+
+    // Load Modules
+    "include": [
+	"~/.config/waybar/modules.json"
+    ],
+
+    // Choose the order of the modules
+    "modules-left": [
+	"custom/supermenu",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+	"pulseausio",
+	"pipewire",
+        "backlight",
+	"bluetooth",
+        "network",
+        "memory",
+        "cpu",
+        "battery",
+        "clock"
+    ],
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
