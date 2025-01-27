@@ -2,7 +2,7 @@
 The dotfiles of my hyprland on arch config, for my laptop.
 
 # Dependencies
-Make sure to have to following packages and utilities:
+Make sure to have the following packages and utilities installed:
 - btop
 - cava
 - checkupdates-with-aur
