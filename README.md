@@ -1,7 +1,7 @@
 # BigNats-hyprland-dotfiles
 The dotfiles of my hyprland on arch config, for my laptop.
 
-# Dependancies
+# Dependencies
 Make sure to have to following packages and utilities:
 - btop
 - cava
