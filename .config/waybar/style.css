@@ -6,341 +6,341 @@
 @define-color theme-color @dark-color;
 
 /* -----------------------------------------------------
- * General 
- * ----------------------------------------------------- */
+* General 
+* ----------------------------------------------------- */
 
 * {
-    font-family: Roboto, Noto, "Font Awesome 6 Free", FontAwesome;
-    border: none;
-    border-radius: 0px;
+  font-family: Roboto, Noto, "Font Awesome 6 Free", FontAwesome;
+  border: none;
+  border-radius: 0px;
 }
 
 window#waybar {
-    background: rgba(26, 26, 26, 255);
-    border-radius: 40px;
-    opacity: 0.9;
-    transition-property: transparent;
-    transition-duration: .5s;
+  background: rgba(26, 26, 26, 255);
+  border-radius: 40px;
+  opacity: 0.9;
+  transition-property: transparent;
+  transition-duration: .5s;
 }
 
 /* -----------------------------------------------------
- * Workspaces 
- * ----------------------------------------------------- */
+* Workspaces 
+* ----------------------------------------------------- */
 
 #workspaces {
-    opacity: 1;
-    background-color: @light-color;
-    padding: 0px 5px 0px 5px;
-    margin: 7px 7px;
-    border-radius: 30px;
-    color: @main-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: @light-color;
+  padding: 0px 5px 0px 5px;
+  margin: 7px 7px;
+  border-radius: 30px;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #workspaces button {
-    opacity: 0.5;
-    background-color: @main-color;
-    padding: 0px 5px;
-    margin: 6px 3px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  background-color: @main-color;
+  padding: 0px 5px;
+  margin: 6px 3px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-    opacity: 0.7;
-    background-color: @main-color;
-    padding: 0px 5px;
-    margin: 6px 3px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    min-width: 40px;
+  opacity: 0.7;
+  background-color: @main-color;
+  padding: 0px 5px;
+  margin: 6px 3px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  min-width: 40px;
 }
 
 #workspaces button:hover {
-    opacity: 1;
-    background-color: @light-color;
-    border-radius: 30px;
-    color: @main-color;
-    font-size: 17px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+  opacity: 1;
+  background-color: @light-color;
+  border-radius: 30px;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
 /* -----------------------------------------------------
- * Tooltips
- * ----------------------------------------------------- */
+* Tooltips
+* ----------------------------------------------------- */
 
 tooltip {
-    border-radius: 17px;
-    background-color: @light-color;
-    padding: 20px;
-    margin: 0px;
-    opacity: 1;
+  border-radius: 17px;
+  background-color: @light-color;
+  padding: 20px;
+  margin: 0px;
+  opacity: 1;
 }
 
 tooltip label {
-    color: @dark-color;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: bold;
-    padding: 0px;
-    margin: 10px;
+  color: @dark-color;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0px;
+  margin: 10px;
 }
 
 /* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
+* Window
+* ----------------------------------------------------- */
 
 #window {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 2px 0px 0px;
-    margin: 7px 7px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 2px 0px 0px;
+  margin: 7px 7px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 window#waybar.empty #window {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* -----------------------------------------------------
- * Modules
- * ----------------------------------------------------- */
+* Modules
+* ----------------------------------------------------- */
 
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 #custom-supermenu {
-    opacity: 1;
-    background-color: @light-color;
-    padding: 0px 15px;
-    margin: 7px;
-    border-radius: 30px;
-    color: @main-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: @light-color;
+  padding: 0px 15px;
+  margin: 7px;
+  border-radius: 30px;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Hardware Group
- * ----------------------------------------------------- */
+* Hardware Group
+* ----------------------------------------------------- */
 
 #disk,#memory,#cpu {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
+* Clock
+* ----------------------------------------------------- */
 
 #clock {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Backlight
- * ----------------------------------------------------- */
+* Backlight
+* ----------------------------------------------------- */
 
 #backlight {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Pipewire
- * ----------------------------------------------------- */
+* Pipewire
+* ----------------------------------------------------- */
 
 #wireplumber {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Network
- * ----------------------------------------------------- */
+* Network
+* ----------------------------------------------------- */
 
 #network {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #network.ethernet {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #network.wifi {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Bluetooth
- * ----------------------------------------------------- */
+* Bluetooth
+* ----------------------------------------------------- */
 
 #bluetooth, #bluetooth.on, #bluetooth.connected {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #bluetooth.off {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* -----------------------------------------------------
- * Battery
- * ----------------------------------------------------- */
+* Battery
+* ----------------------------------------------------- */
 
 #battery {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #battery.charging, #battery.plugged {
-    opacity: 1;
-    background-color: transparent;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 @keyframes blink {
-    to {
-        background-color: transparent;
-        color: white;
-    }
+to {
+  background-color: transparent;
+  color: white;
+}
 }
 
 #battery.critical:not(.charging) {
-    opacity: 1;
-    background-color: red;
-    padding: 0px 10px;
-    margin: 7px 0px;
-    border-radius: 30px;
-    color: @light-color;
-    font-size: 17px;
-    font-weight: bold;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  opacity: 1;
+  background-color: red;
+  padding: 0px 10px;
+  margin: 7px 0px;
+  border-radius: 30px;
+  color: @light-color;
+  font-size: 17px;
+  font-weight: bold;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 /* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
+* Tray
+* ----------------------------------------------------- */
 
 #tray {
-    opacity: 1;
-    background-color: @transparent;
-    padding: 0px 10px;
-    margin: 7px;
-    border-radius: 30px;
-    color: @main-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: @transparent;
+  padding: 0px 10px;
+  margin: 7px;
+  border-radius: 30px;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #custom-updates {
-    opacity: 1;
-    background-color: @light-color;
-    padding: 0px 15px;
-    margin: 7px;
-    border-radius: 30px;
-    color: @main-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: @light-color;
+  padding: 0px 15px;
+  margin: 7px;
+  border-radius: 30px;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #custom-wlogout {
-    opacity: 1;
-    background-color: @light-color;
-    padding: 0px 10px;
-    margin: 7px;
-    border-radius: 30px;
-    color: @main-color;
-    font-size: 17px;
-    font-weight: bold;
+  opacity: 1;
+  background-color: @light-color;
+  padding: 0px 10px;
+  margin: 7px;
+  border-radius: 30px;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: bold;
 }
