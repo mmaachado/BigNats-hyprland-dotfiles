@@ -1,3 +1,3 @@
 #!/bin/bash
 
-foot
+wofi --show drun

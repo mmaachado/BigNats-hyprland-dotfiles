@@ -1,54 +1,37 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "margin-top": 14,
-    "margin-bottom": 0,
-    "margin-left": 14,
-    "margin-right": 14,
-    "spacing": 0, // Gaps between modules (4px)
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 50,
+  "margin-top": 15,
+  "margin-bottom": 0,
+  "margin-left": 20,
+  "margin-right": 20,
+  "spacing": 0, // Gaps between modules (4px)
+  "reload_style_on_change": true,
 
     // Load Modules
     "include": [
-	"~/.config/waybar/modules.json"
+      "~/.config/waybar/modules.json"
     ],
 
     // Choose the order of the modules
     "modules-left": [
-	"custom/supermenu",
-        "hyprland/window"
+      "custom/supermenu",
+      "tray",
+      "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+      "hyprland/workspaces"
     ],
     "modules-right": [
-	"pulseausio",
-	"pipewire",
-        "backlight",
-	"bluetooth",
-        "network",
-        "memory",
-        "cpu",
-        "battery",
-        "clock"
-    ],
-
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    }
+      "bluetooth",
+      "network",
+      "wireplumber",
+      "backlight",
+      "memory",
+      "cpu",
+      "battery",
+      "clock",
+      "custom/wlogout"
+    ]
 }
