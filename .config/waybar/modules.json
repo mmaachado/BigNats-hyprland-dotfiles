@@ -117,8 +117,7 @@
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "AirPlane mode",
-    "on-click": "foot -e nmcli dev wifi list;",
-    "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle",
+    "on-click": "foot -T nmtui -e nmtui-connect",
     "interval": 5,
     "min-length": 12,
     "max-length": 12
