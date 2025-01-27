@@ -1,6 +1,25 @@
 # BigNats-hyprland-dotfiles
 The dotfiles of my hyprland on arch config, for my laptop.
 
+# Dependancies
+Make sure to have to following packages and utilities:
+- btop
+- cava
+- checkupdates-with-aur
+- fastfetch
+- foot
+- hypridle
+- hyprland (obviously)
+- hyprlock
+- mako
+- neovim
+- oh-my-posh
+- waybar
+- wlogout
+- wofi
+- yay
+- zsh
+
 # Screenshots
 
 ### Empty desktop
