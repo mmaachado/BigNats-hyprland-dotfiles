@@ -83,13 +83,12 @@
 
     // Updates Count
     "custom/updates": {
-      "format": "  {}",
+      "format": "𜱭⏺⏺⏺ {}",
       "escape": true,
-      "return-type": "json",
-      "exec": "~/.config/ml4w/scripts/updates.sh",
+      "exec": "~/.config/hypr/scripts/updates.sh",
       "interval": 1800,
-      "on-click": "$(cat ~/.config/ml4w/settings/terminal.sh) --class dotfiles-floating -e ~/.config/ml4w/scripts/installupdates.sh",
-      "on-click-right": "~/.config/ml4w/settings/software.sh"
+      "on-click": "foot -e ~/.config/hypr/scripts/installupdates.sh",
+      "tooltip-format": "Update system"
     },
 
     // Wallpaper

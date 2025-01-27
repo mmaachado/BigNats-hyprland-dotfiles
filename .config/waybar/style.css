@@ -323,6 +323,17 @@ window#waybar.empty #window {
     font-weight: bold;
 }
 
+#custom-updates {
+    opacity: 1;
+    background-color: @light-color;
+    padding: 0px 15px;
+    margin: 7px;
+    border-radius: 30px;
+    color: @main-color;
+    font-size: 17px;
+    font-weight: bold;
+}
+
 #custom-wlogout {
     opacity: 1;
     background-color: @light-color;
