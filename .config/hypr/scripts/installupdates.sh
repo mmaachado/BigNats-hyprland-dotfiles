@@ -19,25 +19,6 @@ return; #false
 
 aur_helper="yay"
 
-if [[ $(_isInstalled "timeshift") == "0" ]] ;then                                        
-    echo
-    if gum confirm "DO YOU WANT TO CREATE A SNAPSHOT?" ;then
-        echo
-        c=$(gum input --placeholder "Enter a comment for the snapshot...")
-        sudo timeshift --create --comments "$c"
-        sudo timeshift --list
-        sudo grub-mkconfig -o /boot/grub/grub.cfg
-        echo ":: DONE. Snapshot $c created!"
-        echo
-    elif [ $? -eq 130 ]; then
-        echo ":: Snapshot skipped."
-        exit 130
-    else
-        echo ":: Snapshot skipped."
-    fi
-    echo
-fi
-
 $aur_helper
 
 if [[ $(_isInstalled "flatpak") == "0" ]] ;then
