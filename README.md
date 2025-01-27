@@ -14,11 +14,17 @@ Make sure to have the following packages and utilities installed:
 - mako
 - neovim
 - oh-my-posh
+- swww
+- udiskie
 - waybar
+- wl-clipboard
 - wlogout
 - wofi
 - yay
 - zsh
+
+# !!! IMPORTANT !!!
+Must do! Put the path to your wallpaper on line 4 in .config/hypr/conf/exec.conf
 
 # Screenshots
 
