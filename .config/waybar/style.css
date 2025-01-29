@@ -18,7 +18,7 @@
 window#waybar {
   background: rgba(26, 26, 26, 255);
   border-radius: 40px;
-  opacity: 0.9;
+  opacity: 1;
   transition-property: transparent;
   transition-duration: .5s;
 }
@@ -30,46 +30,49 @@ window#waybar {
 #workspaces {
   opacity: 1;
   background-color: @light-color;
-  padding: 0px 5px 0px 5px;
-  margin: 7px 7px;
+  padding: 0px 9px;
+  margin: 7px 0px;
   border-radius: 30px;
   color: @main-color;
-  font-size: 17px;
-  font-weight: bold;
+  font-size: 0px;
 }
 
 #workspaces button {
   opacity: 0.5;
+  font-size: 0px;
   background-color: @main-color;
-  padding: 0px 5px;
-  margin: 6px 3px;
+  padding: 0px 6px;
+  margin: 12px 5px;
+  min-height: 0px;
+  min-width: 0px;
   border-radius: 30px;
   color: @light-color;
-  font-size: 17px;
-  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-  opacity: 0.7;
+  opacity: 0.8;
+  font-size: 0px;
   background-color: @main-color;
-  padding: 0px 5px;
-  margin: 6px 3px;
+  padding: 0px 17px;
+  margin: 12px 5px;
+  min-height: 0px;
+  min-width: 0px;
   border-radius: 30px;
   color: @light-color;
-  font-size: 17px;
-  font-weight: bold;
   transition: all 0.3s ease-in-out;
-  min-width: 40px;
 }
 
-#workspaces button:hover {
-  opacity: 1;
-  background-color: @light-color;
+#workspaces button.hover {
+  opacity: 0.5;
+  font-size: 0px;
+  background-color: @main-color;
+  padding: 0px 6px;
+  margin: 0px 3px;
+  min-height: 0px;
+  min-width: 0px;
   border-radius: 30px;
-  color: @main-color;
-  font-size: 17px;
-  font-weight: bold;
+  color: @light-color;
   transition: all 0.3s ease-in-out;
 }
 
