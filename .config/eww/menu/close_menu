@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Files and cmd
+FILE="$HOME/.cache/eww_launch.menu"
+CFG="$HOME/.config/eww/menu"
+EWW=`which eww`
+
+## Launch or close widgets accordingly
+if [[ -f "$FILE" ]]; then
+	${EWW} --config "$CFG" close \
+					system apps power folders
+	rm "$FILE"
+fi
