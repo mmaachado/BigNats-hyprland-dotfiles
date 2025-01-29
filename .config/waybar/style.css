@@ -50,25 +50,15 @@ window#waybar {
   transition: all 0.3s ease-in-out;
 }
 
+#workspaces button:hover {
+}
+
 #workspaces button.active {
   opacity: 0.8;
   font-size: 0px;
   background-color: @main-color;
   padding: 0px 17px;
   margin: 12px 5px;
-  min-height: 0px;
-  min-width: 0px;
-  border-radius: 30px;
-  color: @light-color;
-  transition: all 0.3s ease-in-out;
-}
-
-#workspaces button.hover {
-  opacity: 0.5;
-  font-size: 0px;
-  background-color: @main-color;
-  padding: 0px 6px;
-  margin: 0px 3px;
   min-height: 0px;
   min-width: 0px;
   border-radius: 30px;
