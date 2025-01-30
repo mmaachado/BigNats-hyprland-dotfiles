@@ -4,8 +4,8 @@
 (defpoll HOST :interval "5s" `hostname`)
 (defpoll CPU_USAGE :interval "1s" `scripts/sys_info --cpu`)
 (defpoll MEM_USAGE :interval "1s" `scripts/sys_info --mem`)
-(defpoll BLIGHT :interval "1s" `scripts/sys_info --blight`)
-(defpoll BATTERY :interval "5s" `scripts/sys_info --bat`)
+(defpoll BLIGHT :interval "100ms" `scripts/sys_info --blight`)
+(defpoll BATTERY :interval "10s" `scripts/sys_info --bat`)
 
 ;; Files vars
 (defpoll FREE :interval "5s" `df -h / | awk '{print $4}' | tail -n 1 | sed 's/G/GB/'`)
@@ -16,7 +16,7 @@
 
 ;; system
 (defwidget system [] 
-	(box :class "genwin" :vexpand "false" :hexpand "false" 
+	(box :class "systemwidget" :vexpand "false" :hexpand "false" 
 		(box :orientation "v" :spacing 35 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false" 
 			(box :class "cpu_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 				(label :class "iconcpu" :text "")
@@ -24,40 +24,57 @@
 			(box :class "mem_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 				(label :class "iconmem" :text "")
 				(scale :min 0 :max 100 :value MEM_USAGE :active "false"))
+			(box :class "bat_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(label :class "iconbat" :text "")
+				(scale :min 0 :max 100 :value BATTERY :active "false"))
 			(box :class "bright_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
 				(label :class "iconbright" :text "")
 				(scale :min 0 :max 100 :value BLIGHT :active "false"))
-			(box :class "bat_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
-				(label :class "iconbat" :text "")
-				(scale :min 0 :max 100 :value BATTERY :active "false")))))
+)))
+
 
 ;; apps
 (defwidget apps [] 
-	(box :class "genwin" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
+	(box :class "appwidget" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
+
+		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false"
+			(button :style "background-image: url('images/icons/terminal.png');" :class "app_terminal" :onclick "scripts/open_apps --terminal")
+			(button :style "background-image: url('images/icons/files.png');" :class "app_files" :onclick "scripts/open_apps --files"))
+
+		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false"
+			(button :style "background-image: url('images/icons/vim.png');" :class "app_vim" :onclick "scripts/open_apps --vim")
+			(button :style "background-image: url('images/icons/browser.png');" :class "app_browser" :onclick "scripts/open_apps --browser"))
+
 		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-			(button :style "background-image: url('images/icons/firefox.svg');" :class "app_fox" :onclick "scripts/open_apps --ff")
-			(button :style "background-image: url('images/icons/telegram.svg');" :class "app_telegram" :onclick "scripts/open_apps --tg")
-			(button :style "background-image: url('images/icons/discord.svg');" :class "app_discord" :onclick "scripts/open_apps --dc"))
+			(button :style "background-image: url('images/icons/discord.png');" :class "app_discord" :onclick "scripts/open_apps --discord")
+			(button :style "background-image: url('images/icons/intellij.png');" :class "app_intellij" :onclick "scripts/open_apps --intellij"))
+
+		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false"
+			(button :style "background-image: url('images/icons/minecraft.png');" :class "app_minecraft" :onclick "scripts/open_apps --minecraft")
+			(button :style "background-image: url('images/icons/steam.png');" :class "app_steam" :onclick "scripts/open_apps --steam"))
+
 		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-			(button :style "background-image: url('images/icons/terminal.svg');" :class "app_terminal" :onclick "scripts/open_apps --tr")
-			(button :style "background-image: url('images/icons/files.svg');" :class "app_files" :onclick "scripts/open_apps --fm")
-			(button :style "background-image: url('images/icons/geany.svg');" :class "app_geany" :onclick "scripts/open_apps --ge"))
+			(button :style "background-image: url('images/icons/vbox.png');" :class "app_vbox" :onclick "scripts/open_apps --vbox"))
+
 		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-			(button :style "background-image: url('images/icons/code.svg');" :class "app_code" :onclick "scripts/open_apps --cd")
-			(button :style "background-image: url('images/icons/gimp.svg');" :class "app_gimp" :onclick "scripts/open_apps --gp")
-			(button :style "background-image: url('images/icons/virtualbox.svg');" :class "app_vbox" :onclick "scripts/open_apps --vb"))))
+			(button :style "background-image: url('images/icons/gimp.png');" :class "app_gimp" :onclick "scripts/open_apps --gimp"))
+
+		(box :class "appbox" :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false"
+			(button :style "background-image: url('images/icons/yt-music.png');" :class "app_yt-music" :onclick "scripts/open_apps --yt-music"))
+))
+
 
 ;; power buttons
 (defwidget power [] 
-	(box :class "genwin" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
+	(box :class "powerwidget" :orientation "v" :space-evenly "false" :vexpand "false" :hexpand "false" 
 		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-      (button :class "btn_logout" :onclick "openbox --exit" "󰍃"))
-		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
+      (button :class "btn_logout" :onclick "openbox --exit" "󰍃")
       (button :class "btn_sleep" :onclick "systemctl suspend" "󰏦"))
 		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-      (button :class "btn_reboot" :onclick "systemctl reboot" ""))
-		(box :orientation "h" :space-evenly "false" :vexpand "false" :hexpand "false" 
-      (button :class "btn_poweroff" :onclick "systemctl poweroff" ""))))
+      (button :class "btn_reboot" :onclick "systemctl reboot" "")
+      (button :class "btn_poweroff" :onclick "systemctl poweroff" ""))
+))
+
 
 ;; folders
 (defwidget folders [] 
@@ -94,19 +111,19 @@
 ;; system
 (defwindow system :stacking "fg" :focusable "false" :screen 1 
       :monitor 0
-	    :geometry (geometry :x 20 :y 300 :width 400 :height 325)
+	    :geometry (geometry :x 20 :y 388 :width 400 :height 325)
 					(system))
 
 ;; apps
 (defwindow apps :stacking "fg" :focusable "false" :screen 1 
       :monitor 0
-	    :geometry (geometry :x 440 :y 18 :width 90 :height 400)
+	    :geometry (geometry :x 440 :y 18 :width 40 :height 300)
 					(apps))
 
 ;; power
 (defwindow power :stacking "fg" :focusable "false" :screen 1 
       :monitor 0
-	    :geometry (geometry :x 440 :y 440 :width 50 :height 200)
+	    :geometry (geometry :x 440 :y 388 :width 50 :height 50)
 					(power))
 
 ;; folders
