@@ -66,22 +66,8 @@ local options = {
       "                                                                       ",
     },
 
-    -- header = {
-    --   "                            ",
-    --   "     ▄▄         ▄ ▄▄▄▄▄▄▄   ",
-    --   "   ▄▀███▄     ▄██ █████▀    ",
-    --   "   ██▄▀███▄   ███           ",
-    --   "   ███  ▀███▄ ███           ",
-    --   "   ███    ▀██ ███           ",
-    --   "   ███      ▀ ███           ",
-    --   "   ▀██ █████▄▀█▀▄██████▄    ",
-    --   "     ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀   ",
-    --   "                            ",
-    --   "     Powered By  eovim    ",
-    --   "                            ",
-    -- },
-
     buttons = {
+      { txt = "  Open Tree", keys = "t", cmd = ":NvimTreeToggle" },
       { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
       { txt = "🗁  Programming Folder", keys = "prog", cmd = "cd ~/Documents/programming/" },
       { txt = "🗁  Advent of Code Folder", keys = "aoc", cmd = "cd ~/Documents/programming/advent_of_code/" },

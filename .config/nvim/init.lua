@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.opt.tabstop=3
 vim.opt.shiftwidth=3
+vim.opt.relativenumber = true
 
 local lazy_config = require "configs.lazy"
 
