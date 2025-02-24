@@ -1,0 +1,39 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 30,
+  "margin-top": 10,
+  "margin-bottom": 0,
+  "margin-left": 15,
+  "margin-right": 6,
+  "spacing": 0, // Gaps between modules
+  "reload_style_on_change": true,
+  "fixed-center": true,
+
+    // Load Modules
+    "include": [
+      "~/.config/waybar/modules.json"
+    ],
+
+    // Choose the order of the modules
+    "modules-left": [
+      "custom/menu",
+      "hyprland/workspaces",
+      "tray",
+      "wlr/taskbar"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "bluetooth",
+      "network",
+      "wireplumber",
+      "backlight",
+      "memory",
+      "cpu",
+      "battery",
+      "custom/updates",
+      "custom/wlogout"
+    ]
+}

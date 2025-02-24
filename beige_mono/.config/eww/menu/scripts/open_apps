@@ -1,0 +1,47 @@
+#!/bin/bash
+
+## Open Applications
+FILE="$HOME/.cache/eww_launch.menu"
+CFG="$HOME/.config/eww/menu"
+EWW=`which eww`
+
+close_menu() {
+	${EWW} --config "$CFG" close \
+					system apps power folders
+	rm -rf "$FILE"
+}
+
+if [[ "$1" == "--terminal" ]]; then
+	close_menu && foot -D ~ &
+
+elif [[ "$1" == "--files" ]]; then
+	close_menu && nautilus ~ &
+
+elif [[ "$1" == "--vim" ]]; then
+	close_menu && foot -e nvim &
+
+elif [[ "$1" == "--browser" ]]; then
+	close_menu && zen-browser &
+
+elif [[ "$1" == "--discord" ]]; then
+	close_menu && vesktop &
+
+elif [[ "$1" == "--intellij" ]]; then
+	close_menu && /home/bignat/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea &
+
+elif [[ "$1" == "--minecraft" ]]; then
+	close_menu && prime-run prismlauncher &
+
+elif [[ "$1" == "--steam" ]]; then
+	close_menu && steam &
+
+elif [[ "$1" == "--vbox" ]]; then
+	close_menu && virtualbox &
+
+elif [[ "$1" == "--gimp" ]]; then
+	close_menu && gimp &
+
+elif [[ "$1" == "--yt-music" ]]; then
+	close_menu && youtube-music &
+
+fi
