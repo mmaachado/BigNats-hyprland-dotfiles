@@ -20,8 +20,12 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 alias shutdown='shutdown now'
-alias pipes='pipes.sh -p 8 -R -K -r 10000'
+alias pipes='pipes.sh -p 6 -RCKr 3000'
+alias clock='tty-clock -cC 0'
+alias f='ranger'
 alias i='sudo pacman -S'
+alias screen='grim -g "$(slurp  -w 0 -b 00000066)" - | wl-copy'
+alias fullscreen='grim - | wl-copy'
 # git aliases
 alias gl='git log --all --decorate --oneline --graph'
 alias gs='git status'
@@ -36,3 +40,5 @@ fastfetch
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/mytheme.json)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(thefuck --alias)"
+
+export LD_LIBRARY_PATH=.
