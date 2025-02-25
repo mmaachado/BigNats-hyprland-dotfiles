@@ -21,10 +21,13 @@ alias vi='nvim'
 alias vim='nvim'
 alias shutdown='shutdown now'
 alias pipes='pipes.sh -p 8 -R -K -r 10000'
+alias i='sudo pacman -S'
+# git aliases
 alias gl='git log --all --decorate --oneline --graph'
 alias gs='git status'
 alias ga='git add .'
-alias i='sudo pacman -S'
+alias gc='git commit -m'
+alias gp='git pull'
 
 bindkey -e
 
