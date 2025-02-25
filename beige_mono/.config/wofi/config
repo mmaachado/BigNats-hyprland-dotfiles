@@ -1,8 +1,8 @@
 stylesheet=style.css
 colors=colors
 mode=drun
-width=50%
-height=50%
+width=30%
+height=80%
 allow_images=true
 hide_scroll=false
 insensitive=true
@@ -10,3 +10,6 @@ columns=1
 filter_rate=100
 image_size=32
 key_expand=Tab
+location=1
+xoffset=13
+yoffset=8
