@@ -23,6 +23,7 @@ alias shutdown='shutdown now'
 alias pipes='pipes.sh -p 8 -R -K -r 10000'
 alias gl='git log --all --decorate --oneline --graph'
 alias gs='git status'
+alias ga='git add .'
 alias i='sudo pacman -S'
 
 bindkey -e
