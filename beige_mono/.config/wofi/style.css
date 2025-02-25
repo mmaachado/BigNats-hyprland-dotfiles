@@ -17,7 +17,6 @@ window > box {
 #input {
   margin: 10px;
   border-radius: 10px;
-  border: 5px solid --wofi-color0;
   background-color: rgba(--wofi-rgb-color3, 1);
   color: --wofi-color0;
   font-size: 20px;
@@ -27,9 +26,9 @@ window > box {
 /* search icon */
 #input:first-child > :nth-child(1) {
   background-color: rgba(--wofi-rgb-color0, 1);
-  margin: 8px 10px 8px 0px;
+  margin: 8px 8px 8px 0px;
   padding: 10px;
-  border-radius: 100px;
+  border-radius: 10px;
   color: --wofi-color1;
   font-size: 20px;
   font-weight: bold;
@@ -40,7 +39,7 @@ window > box {
   background-color: rgba(--wofi-rgb-color0, 1);
   margin: 8px 0px 8px 0px;
   padding: 10px;
-  border-radius: 100px;
+  border-radius: 10px;
   color: --wofi-color1;
   font-size: 20px;
   font-weight: bold;
@@ -50,7 +49,7 @@ window > box {
   margin: 0px 10px;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(--wofi-rgb-color0, 1);
+  background-color: rgba(--wofi-rgb-color3, 1);
 }
 
 #outer-box {
@@ -61,7 +60,7 @@ window > box {
 
 #text {
   padding: 5px;
-  color: rgba(--wofi-rgb-color2, 2);
+  color: rgba(--wofi-rgb-color0, 1);
   transition: all 0.1s ease-in;
 }
 
@@ -74,8 +73,8 @@ window > box {
 }
 
 #entry:selected {
-  color: --wofi-color0;
-  background-color: --wofi-color3;
+  color: --wofi-color3;
+  background-color: --wofi-color0;
   border-radius: 10px;
   padding: 10px;
   margin: 0px 0px 0px 20px;
@@ -84,7 +83,7 @@ window > box {
 }
 
 #text:selected {
-  color: --wofi-color0;
+  color: --wofi-color3;
   font-weight: bold;
   transition: all 0.1s ease-in;
 }
