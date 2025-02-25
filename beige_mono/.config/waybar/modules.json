@@ -93,6 +93,7 @@
   "clock": {
     "format": "{:%H:%M}",
     "tooltip-format": "{:%a %d %B %Y}",
+    "on-click": "foot -T todo -e c3",
     "min-length": 7,
     "max-length": 7
   },
