@@ -271,37 +271,21 @@ window#waybar.empty #window {
 
 #network {
   opacity: 1;
-  background-color: transparent;
+  background-color: @dark-color;
   padding: 0px 10px;
-  margin: 7px 0px;
-  border-radius: 30px;
-  color: @dark-color;
+  margin: 5px 4px;
+  border-radius: 7px;
+  color: @light-color;
   font-size: 17px;
   font-weight: bold;
+  transition: all 0.1s ease-in;
 }
 
-#network.ethernet {
-  opacity: 1;
-  background-color: transparent;
-  padding: 0px 10px;
-  margin: 7px 0px;
-  border-radius: 30px;
+#network:hover {
+  background-color: @main-light-color;
   color: @dark-color;
-  font-size: 17px;
-  font-weight: bold;
+  transition: all 0.1s ease-in;
 }
-
-#network.wifi {
-  opacity: 1;
-  background-color: transparent;
-  padding: 0px 10px;
-  margin: 7px 0px;
-  border-radius: 30px;
-  color: @dark-color;
-  font-size: 17px;
-  font-weight: bold;
-}
-
 /* -----------------------------------------------------
 * Bluetooth
 * ----------------------------------------------------- */

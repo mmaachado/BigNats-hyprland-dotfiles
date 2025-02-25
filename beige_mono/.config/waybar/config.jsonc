@@ -26,13 +26,13 @@
       "clock"
     ],
     "modules-right": [
-      "bluetooth",
-      "network",
       "wireplumber",
       "backlight",
       "memory",
       "cpu",
       "battery",
+      "bluetooth",
+      "network",
       "custom/updates",
       "custom/wlogout"
     ]
