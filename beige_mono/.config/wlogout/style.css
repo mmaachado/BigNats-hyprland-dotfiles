@@ -8,25 +8,27 @@ window {
 }
 
 button {
-  border-radius: 30;
-  border-color: white;
+  border-radius: 10px;
   border-style: solid;
-  border-width: 3px;
+  border-width: 0px;
   margin: 20px;
-  text-decoration-color: #f5f5f5;
-  color: #f5f5f5;
-  background-color: #111111;
+  text-decoration-color: #ffffff;
+  outline: none;
+  color: #ffffff;
+  background-color: #1a1a1a;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 15%;
-}
-
-button:focus, button:active {
-  background-size: 20%;
+  box-shadow: 3px 3px 2px 3px #808080;
 }
 
 button:hover {
-  background-size: 30%;
+  background-color: #dcd3ca;
+  background-size: 20%;
+}
+
+button:focus, button:active {
+  background-size: 35%;
 }
 
 #lock {
