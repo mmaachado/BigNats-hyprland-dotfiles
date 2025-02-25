@@ -273,7 +273,7 @@ window#waybar.empty #window {
   opacity: 1;
   background-color: @dark-color;
   padding: 0px 10px;
-  margin: 5px 4px;
+  margin: 5px 7px 5px 15px;
   border-radius: 7px;
   color: @light-color;
   font-size: 17px;
