@@ -91,11 +91,11 @@
 
   // Clock
   "clock": {
-    "format": "{:%H:%M}",
-    "tooltip-format": "{:%a %d %B %Y}",
+    "format": "{:%H:%M   %d-%m-%Y}",
+    "tooltip-format": "{:%A %d %B %Y}\nclick for todo list",
     "on-click": "foot -T todo -e c3",
-    "min-length": 7,
-    "max-length": 7
+    "min-length": 17,
+    "max-length": 17
   },
 
   // Memory
