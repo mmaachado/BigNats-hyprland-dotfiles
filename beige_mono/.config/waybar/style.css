@@ -78,10 +78,10 @@ window#waybar > box {
 * ----------------------------------------------------- */
 
 tooltip {
+  opacity: 1;
   background-color: transparent;
   padding: 0px;
   margin: 0px;
-  opacity: 1;
 }
 
 tooltip label {
@@ -96,6 +96,7 @@ tooltip label {
 tooltip > box {
   border-radius: 7px;
   background-color: @main-color;
+  margin: 2px 9px 8px 2px;
   box-shadow: 5px 5px 2px 1px #808080;
 }
 
