@@ -198,9 +198,9 @@
       ""
     ],
     "tooltip-format": "{percent}% brightness",
-    "scroll-step": 1,
     "min-length": 7,
-    "max-length": 7
+    "max-length": 7,
+    "scroll-step": 10
   },
 
   "wireplumber": {
