@@ -12,6 +12,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 compinit
 # End of lines added by compinstall
 
+# search history matching beginning of line
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
+
 alias c='clear; fastfetch'
 alias l='eza --color=always --long --git --icons=always'
 alias la='eza --color=always --long --git --icons=always --all'
@@ -22,6 +29,7 @@ alias vim='nvim'
 alias shutdown='shutdown now'
 alias pipes='pipes.sh -p 6 -RCKr 3000'
 alias clock='tty-clock -cC 0'
+alias matrix='unimatrix -afs 97'
 alias f='ranger'
 alias i='sudo pacman -S'
 alias screen='grim -g "$(slurp  -w 0 -b 00000066)" - | wl-copy'
