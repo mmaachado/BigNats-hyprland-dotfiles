@@ -10,7 +10,7 @@ local options = {
     hl_override = {},
     integrations = {},
     changed_themes = {},
-    transparency = true,
+    transparency = false,
     theme_toggle = { "carbonfox", "penumbra_light" },
   },
 

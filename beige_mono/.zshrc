@@ -19,7 +19,7 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 
-alias c='clear; fastfetch'
+alias c='clear; fortune -s | cowthink -r'
 alias l='eza --color=always --long --git --icons=always'
 alias la='eza --color=always --long --git --icons=always --all'
 alias cdcours='cd ~/Documents/scolaire/2024-2025_si3/cours/'
@@ -28,6 +28,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias shutdown='shutdown now'
 alias pipes='pipes.sh -p 6 -RCKr 3000'
+alias tty-pipes='pipes.sh -Rp 6 -t 3'
 alias clock='tty-clock -cC 0'
 alias matrix='unimatrix -afs 97'
 alias f='ranger'
@@ -43,10 +44,17 @@ alias gp='git pull'
 
 bindkey -e
 
-fastfetch
+# fastfetch
+fortune -s | cowthink -r
 
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/mytheme.json)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(thefuck --alias)"
 
-export LD_LIBRARY_PATH=.
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

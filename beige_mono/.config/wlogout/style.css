@@ -12,10 +12,10 @@ button {
   border-style: solid;
   border-width: 0px;
   margin: 20px;
-  text-decoration-color: #ffffff;
+  text-decoration-color: #000000;
   outline: none;
-  color: #ffffff;
-  background-color: #1a1a1a;
+  color: #000000;
+  background-color: #dcd3ca;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 15%;
