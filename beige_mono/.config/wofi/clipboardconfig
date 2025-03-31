@@ -3,6 +3,7 @@ colors=colors
 mode=drun
 width=55%
 height=70%
+prompt=Search clipboard
 allow_images=true
 hide_scroll=false
 insensitive=true
