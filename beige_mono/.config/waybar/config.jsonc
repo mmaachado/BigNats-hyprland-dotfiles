@@ -23,7 +23,9 @@
       "wlr/taskbar"
     ],
     "modules-center": [
-      "clock"
+      "custom/clipboard",
+      "clock",
+      "custom/screenshot"
     ],
     "modules-right": [
       "wireplumber",

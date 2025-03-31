@@ -71,6 +71,20 @@
     "tooltip-format": "Click to toggle applications menu"
   },
 
+  // Clipboard script
+  "custom/clipboard": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/clipboard.sh",
+    "tooltip-format": "Click to open clipboard"
+  },
+
+  // Screenshot script
+  "custom/screenshot": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/screenshotlist.sh",
+    "tooltip-format": "Click to open screenshot menu"
+  },
+
   // Logout menu launcher
   "custom/wlogout": {
     "format": "⏻",

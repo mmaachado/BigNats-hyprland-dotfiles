@@ -170,6 +170,10 @@ window#waybar.empty #window {
   margin-right: 0;
 }
 
+/* -----------------------------------------------------
+ * App Launcher
+ * ----------------------------------------------------- */
+
 #custom-menu {
   opacity: 1;
   background-color: @dark-color;
@@ -183,6 +187,50 @@ window#waybar.empty #window {
 }
 
 #custom-menu:hover {
+  background-color: @main-light-color;
+  color: @dark-color;
+  transition: all 0.1s ease-in;
+}
+
+/* -----------------------------------------------------
+ * Clipboard
+ * ----------------------------------------------------- */
+
+#custom-clipboard {
+  opacity: 1;
+  background-color: @dark-color;
+  padding: 0px 9px 0px 7px;
+  margin: 5px 0px;
+  border-radius: 7px;
+  color: @light-color;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.1s ease-in;
+}
+
+#custom-clipboard:hover {
+  background-color: @main-light-color;
+  color: @dark-color;
+  transition: all 0.1s ease-in;
+}
+
+/* -----------------------------------------------------
+ * Screenshots
+ * ----------------------------------------------------- */
+
+#custom-screenshot {
+  opacity: 1;
+  background-color: @dark-color;
+  padding: 0px 5px;
+  margin: 5px 0px;
+  border-radius: 7px;
+  color: @light-color;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.1s ease-in;
+}
+
+#custom-screenshot:hover {
   background-color: @main-light-color;
   color: @dark-color;
   transition: all 0.1s ease-in;
@@ -261,7 +309,7 @@ window#waybar.empty #window {
   opacity: 1;
   background-color: @dark-color;
   padding: 0px 0px;
-  margin: 5px 7px;
+  margin: 5px 11px;
   border-radius: 7px;
   color: @light-color;
   font-size: 17px;
