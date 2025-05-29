@@ -23,9 +23,9 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 18,
-    "tooltip-format": "{title}",
+    "tooltip-format": "{title}\n\nClick to go to\nMiddle click to toggle fullscreen\nRight click to close",
     "on-click": "activate",
-    "on-click-middle": "activate",
+    "on-click-middle": "fullscreen",
     "on-click-right": "close",
     "max-length": 15,
     "app_ids-mapping": {
@@ -37,79 +37,60 @@
     }
   },
 
-  // Hyprland Window
-  "hyprland/window": {
-    "rewrite": {
-      "(.*) - Brave": "$1",
-      "(.*) - Chromium": "$1",
-      "(.*) - Brave Search": "$1",
-      "(.*) - Outlook": "$1",
-      "(.*) Microsoft Teams": "$1"
-    },
-    "separate-outputs": true
-  },
-
   // Empty
   "custom/empty": {
     "format": ""
   },
 
-  // Updates Count
+  // Updates
   "custom/updates": {
-    "format": "𜱭⏺⏺⏺ {}",
+    "format": "𜱭 {}",
     "escape": true,
-    "exec": "~/.config/hypr/scripts/updates.sh",
+    "exec": "~/.config/hypr/scripts/updates_count.sh",
     "interval": 600,
-    "on-click": "foot -e ~/.config/hypr/scripts/installupdates.sh",
+    "on-click": "~/.config/hypr/scripts/updates_toggle.sh",
     "tooltip-format": "Update system"
   },
 
-  // Super menu launcher
+  // App menu
   "custom/menu": {
     "format": "󰣇",
-    "on-click": "~/.config/wofi/toggle.sh",
-    "tooltip-format": "Click to toggle applications menu"
+    "on-click": "~/.config/hypr/scripts/appmenu_toggle.sh",
+    "tooltip-format": "Toggle app menu"
   },
 
-  // Clipboard script
+  // Clipboard menu
   "custom/clipboard": {
     "format": "",
-    "on-click": "~/.config/hypr/scripts/clipboard.sh",
-    "tooltip-format": "Click to open clipboard"
+    "on-click": "~/.config/hypr/scripts/clipboard_toggle.sh",
+    "tooltip-format": "Toggle clipboard"
   },
 
-  // Screenshot script
+  // Screenshot menu
   "custom/screenshot": {
     "format": "",
     "on-click": "~/.config/hypr/scripts/screenshotlist.sh",
-    "tooltip-format": "Click to open screenshot menu"
+    "tooltip-format": "Open screenshot menu"
   },
 
-  // Logout menu launcher
+  // Logout menu
   "custom/wlogout": {
     "format": "⏻",
     "on-click": "wlogout",
-    "tooltip-format": "Open logout menu"
-  },
-
-  // Power Menu
-  "custom/exit": {
-    "format": "",
-    "on-click": "~/.config/ml4w/scripts/wlogout.sh",
-    "tooltip-format": "Power Menu"
+    "tooltip-format": "Toggle logout menu"
   },
 
   // System tray
   "tray": {
     "icon-size": 21,
-    "spacing": 10
+    "spacing": 0
   },
 
   // Clock
   "clock": {
     "format": "{:%H:%M   %d-%m-%Y}",
-    "tooltip-format": "{:%A %d %B %Y}\nclick to toggle todo list",
-    "on-click": "~/.config/c3/toggle.sh",
+    "tooltip-format": "{:%A %d %B %Y}\nToggle todo list",
+    "on-click": "~/.config/hypr/scripts/todo_toggle.sh",
     "min-length": 17,
     "max-length": 17
   },
@@ -119,6 +100,7 @@
     "format": " {}%",
     "tooltip-format": " {used} / {total}Gib RAM used",
     "interval": 5,
+    "on-click": "foot -T btop -e btop",
     "min-length": 7,
     "max-length": 7
   },
@@ -127,19 +109,9 @@
   "cpu": {
     "format": " {usage}%",
     "interval": 1,
+    "on-click": "foot -T btop -e btop",
     "min-length": 7,
     "max-length": 7
-  },
-
-  // Group Hardware
-  "group/hardware": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "children-class": "not-memory",
-      "transition-left-to-right": false
-    },
-    "modules": ["custom/system", "disk", "cpu", "memory", "hyprland/language"]
   },
 
   // Network
@@ -152,7 +124,7 @@
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits}\nClick to toggle wifi selector",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "AirPlane mode",
-    "on-click": "~/.config/hypr/scripts/wifilist.sh",
+    "on-click": "~/.config/hypr/scripts/wifilist_toggle.sh",
     "interval": 5,
     "min-length": 12,
     "max-length": 12
@@ -171,27 +143,21 @@
     "format-icons": [" ", " ", " ", " ", " "],
     "format-off": "",
     "tooltip-format-full": "Battery full",
+    "on-click": "power-options-gtk",
     "interval": 5,
     "min-length": 7,
     "max-length": 7
   },
 
   // Bluetooth
-  "bluetooth": {
-    "format": " {status}",
-    "format-disabled": "",
-    "format-off": "",
-    "interval": 30,
-    "on-click": "blueman-manager",
-    "format-no-controller": ""
-  },
-
-  // Other
-  "user": {
-    "format": "{user}",
-    "interval": 60,
-    "icon": false
-  },
+  //"bluetooth": {
+  //  "format": " {status}",
+  //  "format-disabled": "",
+  //  "format-off": "",
+  //  "interval": 30,
+  //  "on-click": "blueman-manager",
+  //  "format-no-controller": ""
+  //},
 
   // backlight:
   "backlight": {

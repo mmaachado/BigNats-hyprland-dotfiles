@@ -5,7 +5,7 @@ SAVEHIST=1000
 unsetopt autocd
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/bignat/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -20,9 +20,8 @@ bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 
 alias c='clear; fortune -s | cowthink -r'
-alias l='eza --color=always --long --git --icons=always'
-alias la='eza --color=always --long --git --icons=always --all'
-alias cdcours='cd ~/Documents/scolaire/2024-2025_si3/cours/'
+alias l='eza --color=always --long --git --icons=always --group-directories-first'
+alias la='eza --color=always --long --git --icons=always --group-directories-first --all'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
@@ -30,6 +29,7 @@ alias shutdown='shutdown now'
 alias pipes='pipes.sh -p 6 -RCKr 3000'
 alias tty-pipes='pipes.sh -Rp 6 -t 3'
 alias clock='tty-clock -cC 0'
+alias rain='terminal-rain'
 alias matrix='unimatrix -afs 97'
 alias f='ranger'
 alias i='sudo pacman -S'
@@ -41,20 +41,23 @@ alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git pull'
+alias bulkrename='cp ~/.config/hypr/scripts/bulk_rename.sh .; ./bulk_rename.sh; rm bulk_rename.sh'
+
+function o() {zathura "$@" & disown}
 
 bindkey -e
-
-# fastfetch
-fortune -s | cowthink -r
 
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/mytheme.json)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(thefuck --alias)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+## Python environment stuff ? idk
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init - zsh)"
 
+## Load Angular CLI autocompletion
+# source <(ng completion script)
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+clear
+fortune -s | cowthink -r

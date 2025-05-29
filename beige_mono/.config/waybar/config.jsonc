@@ -1,12 +1,12 @@
 {
-  "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 30,
+  "layer": "top",
+  "position": "top",
+  "height": 47,
   "margin-top": 9,
   "margin-bottom": 0,
   "margin-left": 13,
   "margin-right": 6,
-  "spacing": 0, // Gaps between modules
+  "spacing": 0,
   "reload_style_on_change": true,
   "fixed-center": true,
 
@@ -15,7 +15,7 @@
       "~/.config/waybar/modules.json"
     ],
 
-    // Choose the order of the modules
+    // Order of the modules
     "modules-left": [
       "custom/menu",
       "hyprland/workspaces",
@@ -33,7 +33,7 @@
       "memory",
       "cpu",
       "battery",
-      "bluetooth",
+      // "bluetooth",
       "network",
       "custom/updates",
       "custom/wlogout"
