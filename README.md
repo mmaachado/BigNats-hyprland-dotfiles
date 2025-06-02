@@ -1,4 +1,4 @@
-# BigNats-hyprland-dotfiles
+# hyprland-dotfiles
 
 This is a fork of BigNats hyprland dotfiles tuned for my personal use. I use hyprland exclusively when I need to focus on productivity, whether it's writing code, studying, or writing ideas and scripts in Obsidian.
 
