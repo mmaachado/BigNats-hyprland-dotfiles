@@ -10,32 +10,21 @@
   "reload_style_on_change": true,
   "fixed-center": true,
 
-    // Load Modules
-    "include": [
-      "~/.config/waybar/modules.json"
-    ],
+  // Load Modules
+  "include": ["~/.config/waybar/modules.json"],
 
-    // Order of the modules
-    "modules-left": [
-      "custom/menu",
-      "hyprland/workspaces",
-      "tray",
-      "wlr/taskbar"
-    ],
-    "modules-center": [
-      "custom/clipboard",
-      "clock",
-      "custom/screenshot"
-    ],
-    "modules-right": [
-      "wireplumber",
-      "backlight",
-      "memory",
-      "cpu",
-      "battery",
-      // "bluetooth",
-      "network",
-      "custom/updates",
-      "custom/wlogout"
-    ]
+  // Order of the modules
+  "modules-left": ["custom/menu", "hyprland/workspaces", "tray", "wlr/taskbar"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "wireplumber",
+    "backlight",
+    "memory",
+    "cpu",
+    "battery",
+    "bluetooth",
+    "network",
+    "custom/updates",
+    "custom/wlogout"
+  ]
 }

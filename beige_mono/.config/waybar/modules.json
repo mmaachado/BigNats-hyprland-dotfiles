@@ -33,7 +33,7 @@
     },
     "rewrite": {
       "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
+      "Kitty Server": "Terminal"
     }
   },
 
@@ -89,8 +89,7 @@
   // Clock
   "clock": {
     "format": "{:%H:%M   %d-%m-%Y}",
-    "tooltip-format": "{:%A %d %B %Y}\nToggle todo list",
-    "on-click": "~/.config/hypr/scripts/todo_toggle.sh",
+    "tooltip-format": "{:%A %d %B %Y}\nCalendar",
     "min-length": 17,
     "max-length": 17
   },
@@ -100,7 +99,7 @@
     "format": " {}%",
     "tooltip-format": " {used} / {total}Gib RAM used",
     "interval": 5,
-    "on-click": "foot -T btop -e btop",
+    "on-click": "kitty -T btop -e btop",
     "min-length": 7,
     "max-length": 7
   },
@@ -109,7 +108,7 @@
   "cpu": {
     "format": " {usage}%",
     "interval": 1,
-    "on-click": "foot -T btop -e btop",
+    "on-click": "kitty -T btop -e btop",
     "min-length": 7,
     "max-length": 7
   },
@@ -150,14 +149,17 @@
   },
 
   // Bluetooth
-  //"bluetooth": {
-  //  "format": " {status}",
-  //  "format-disabled": "",
-  //  "format-off": "",
-  //  "interval": 30,
-  //  "on-click": "blueman-manager",
-  //  "format-no-controller": ""
-  //},
+  "bluetooth": {
+    //"format": "󰂯 {status}",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-applet"
+    //"interval": 30,
+  },
 
   // backlight:
   "backlight": {
@@ -189,8 +191,8 @@
     "format": "{icon} {volume}%",
     "format-muted": "  mute",
     "tooltip-format": "{node_name} at {volume}%",
-    "scroll-step": "5.0",
-    "max-volume": "100.0",
+    "scroll-step": "5",
+    "max-volume": "100",
     "format-icons": ["", "", "", ""],
     "min-length": 7,
     "max-length": 7,
