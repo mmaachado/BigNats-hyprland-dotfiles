@@ -7,7 +7,7 @@
 @define-color shadow-color #303030;
 
 /* -----------------------------------------------------
-* General 
+* General
 * ----------------------------------------------------- */
 
 * {
@@ -20,7 +20,7 @@ window#waybar {
   background-color: transparent;
   opacity: 1;
   transition-property: transparent;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 window#waybar > box {
@@ -31,7 +31,7 @@ window#waybar > box {
 }
 
 /* -----------------------------------------------------
-* Workspaces 
+* Workspaces
 * ----------------------------------------------------- */
 
 #workspaces {
@@ -53,7 +53,7 @@ window#waybar > box {
   min-height: 0px;
   min-width: 0px;
   transition: all 0.2s linear;
-  transition: background-color 0.0s linear;
+  transition: background-color 0s linear;
 }
 
 #workspaces button > box {
@@ -85,7 +85,7 @@ window#waybar > box {
   min-width: 0px;
   font-size: 0px;
   transition: all 0.2s linear;
-  transition: background-color 0.0s linear;
+  transition: background-color 0s linear;
 }
 
 #workspaces button.special > box {
@@ -202,7 +202,7 @@ window#waybar.empty #window {
   color: @dark-color;
   font-size: 10px;
   font-weight: normal;
-  transition: all 0.0s linear;
+  transition: all 0s linear;
 }
 
 #taskbar button {
@@ -211,7 +211,7 @@ window#waybar.empty #window {
   margin: 0px;
   border-radius: 5px;
   padding: 0px 5px;
-  transition: all 0.0s linear;
+  transition: all 0s linear;
 }
 
 #taskbar button:hover {
@@ -220,7 +220,7 @@ window#waybar.empty #window {
   border-radius: 5px;
   padding: 0px;
   background-color: transparent;
-  transition: all 0.0s linear;
+  transition: all 0s linear;
 }
 
 #taskbar button:hover > box {
@@ -229,21 +229,23 @@ window#waybar.empty #window {
   border-radius: 5px;
   padding: 0px 5px;
   background-color: @main-light-color;
-  transition: all 0.0s linear;
+  transition: all 0s linear;
 }
 
 #taskbar.empty {
-  background:transparent;
-  border:0;
-  padding:0;
-  margin:0;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* -----------------------------------------------------
 * Hardware Group
 * ----------------------------------------------------- */
 
-#disk,#memory,#cpu {
+#disk,
+#memory,
+#cpu {
   opacity: 1;
   background-color: transparent;
   padding: 0px 10px;
@@ -331,7 +333,9 @@ window#waybar.empty #window {
 * Bluetooth
 * ----------------------------------------------------- */
 
-#bluetooth, #bluetooth.on, #bluetooth.connected {
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
   opacity: 1;
   background-color: transparent;
   padding: 0px 10px;
@@ -368,7 +372,8 @@ window#waybar.empty #window {
   font-weight: bold;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
   opacity: 1;
   background-color: transparent;
   padding: 0px 10px;
@@ -380,10 +385,10 @@ window#waybar.empty #window {
 }
 
 @keyframes blink {
-to {
-  background-color: transparent;
-  color: white;
-}
+  to {
+    background-color: transparent;
+    color: white;
+  }
 }
 
 #battery.critical:not(.charging) {
@@ -418,10 +423,10 @@ to {
 }
 
 #tray.empty {
-  background:transparent;
-  border:0;
-  padding:0;
-  margin:0;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #custom-updates {
