@@ -1,12 +1,12 @@
 # hyprland-dotfiles
 
-This is a fork of BigNats hyprland dotfiles tuned for my personal use. I use hyprland exclusively when I need to focus on productivity, whether it's writing code, studying, or writing ideas and scripts in Obsidian.
+This is a fork of [BigNats](https://github.com/NathanGros/BigNats-hyprland-dotfiles) hyprland dotfiles tuned for my personal use. I use hyprland exclusively when I need to focus on productivity, whether it's writing code, studying, or writing ideas and scripts in Obsidian.
 
 All the settings here are tuned to fit my workflow and tools.
 
 ## IMPORTANT
 
-Change (or not) the wallpapers and user profile picture in `.config/hypr`.
+Change the wallpapers and user profile picture in `.config/hypr`.
 
 I **highly** recommend looking at the `.config/hypr/conf/bindings.conf` file to learn all the bindings.
 
@@ -61,28 +61,11 @@ Also please check the dependancies below.
 ### Optionnal applications
 
 - bibata-cursor-theme
-- asciiquarium
-- cava
-- cbonsai
-- cmatrix
-- fastfetch
+- neofetch
 - firefox
 - neovim
-- pipes.sh
-- prismlauncher
-- ranger
-- tty-clock
-- thunar
-- tumbler # for thunar picture display
-- tumbler-extra-thumbnailers
-- unimatrix-git
-- vesktop
-- vi
-- vim
-- youtube-music
-- zathura
-- zathura-pdf-mupdf
-- zen-browser-bin
+- nautilus
+- starship
 
 ## Gallery
 
@@ -92,7 +75,7 @@ Also please check the dependancies below.
 
 ### Updates menu
 
-A waybar module that tells you how many pacman updates there are (each update is a dot) (i'm so proud of this lol)
+A waybar module that tells you how many pacman updates there are (each update is a dot)
 
 ![alt text](https://github.com/NathanGros/BigNats-hyprland-dotfiles/blob/main/beige_mono/gallery/update.png)
 
